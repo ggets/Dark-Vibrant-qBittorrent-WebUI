@@ -30,7 +30,7 @@
 [license]: https://img.shields.io/github/license/iFelix18/Dark-qBittorrent-WebUI.svg?longCache=true&style=flat-square
 [6]: https://creativecommons.org/licenses/by-sa/4.0/
 [Cozzy's theme]: https://userstyles.org/styles/152766/
-[preview]: https://i.imgur.com/M3TAp0l.png
+[preview]: ![image](https://user-images.githubusercontent.com/4815620/224517415-ff9591d4-ffe1-4168-9029-3a635f13a412.png)
 [7]: https://addons.mozilla.org/firefox/addon/styl-us/
 [8]: https://chrome.google.com/webstore/detail/clngdbkpkpeebahjckkjfobafhncgmne
 [9]: https://addons.opera.com/extensions/details/stylus/
