@@ -1,18 +1,311 @@
 /* ==UserStyle==
-@name           Dark qBittorrent WebUI
-@version        1.0.0
-@namespace      https://github.com/iFelix18/
-@description    A darker theme for qBittorrent WebUI (ispired by Cozzy's theme: userstyles.org/styles/152766)
-@author         Felix
-@homepageURL    https://github.com/iFelix18/Dark-qBittorrent-WebUI/
-@supportURL     https://github.com/iFelix18/Dark-qBittorrent-WebUI/issues/
-@updateURL      https://raw.githubusercontent.com/iFelix18/Dark-qBittorrent-WebUI/master/dark-qbittorrent-webui.user.css
+@name           Dark Vibrant qBittorrent WebUI
+@version        2.0.0
+@namespace      https://github.com/ggets/
+@description    A darker (yet vibrant) theme for qBittorrent WebUI (improved iFelix18 theme, ispired by Cozzy's theme: userstyles.org/styles/152766)
+@author         Felix & GGets
+@homepageURL    https://github.com/ggets/Dark-qBittorrent-WebUI/
+@supportURL     https://github.com/ggets/Dark-qBittorrent-WebUI/issues/
+@updateURL      https://raw.githubusercontent.com/ggets/Dark-qBittorrent-WebUI/master/dark-qbittorrent-webui.user.css
 @license        CC-BY-SA-4.0
 @preprocessor   stylus
 ==/UserStyle== */
 @-moz-document url-prefix("http://192.168.1.10/torrent/") {
     /*              Change ▲ ▲ ▲ ▲ ▲ THIS URL ▲ ▲ ▲ ▲ ▲ with what you use to access to the qBittorrent WebUI, this is an example.
 ----------------------------------------------------------------------------------------------*/
+    /* Dark Vibrant qBittorrent WebUI by Felix && GGets
+    
+            1.0.0 (03/06/2018) - first release
+            2.0.0 (12/03/2023) - latest release
+    
+----------------------------------------------------------------------------------------------*/
+/*#desktopNavbar{display:none;}*/
+/*#filtersColumn,#filtersColumn_handle{display:none;}*/
+:root {
+    --c-accent: hsla(210,75%,50%,1);
+    --c-accent-050: hsla(210,75%,50%,.50);
+    --c-accentLight: hsla(210,75%,60%,1);
+    --c-accentLight-050: hsla(210,75%,60%,.50);
+    --c-accentDark: hsla(210,75%,40%,1);
+    --c-accentDark-050: hsla(210,75%,40%,.50);
+    --c-black-060: hsla(0,0%,0%,.60);
+    --c-black-020: hsla(0,0%,0%,.20);
+    --c-black-010: hsla(0,0%,0%,.10);
+    --c-white-008: hsla(0,0%,100%,.08);
+    --c-white-016: hsla(0,0%,100%,.16);
+    --c-white-080: hsla(0,0%,100%,.80);
+    --c-white-100: hsla(0,0%,100%,1);
+}
+td.statusBarSeparator{
+    background: var(--color-Grey) !important;
+    width: 0px;
+}
+#torrentsTableMenu{
+    box-shadow: 0px 0px 0px 2px hsla(0,0%,0%,.4),0px 4px 6px 0px hsla(0,0%,0%,.4);
+}
+#prop_general fieldset,
+#watched_folders_tab tr,
+#watched_folders_tab th,
+#watched_folders_tab td {
+    border-color: var(--color-Grey) !important;
+}
+input,
+textarea {
+    color: var(--color-White) !important;
+    border: 0px;
+    /*white-space: nowrap;*/
+    background-color: var(--color-Grey) !important;
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    background-position: left;
+}
+#torrentsFilterToolbar{
+    margin: 0 0 0 8px;
+}
+#torrentsFilterToolbar input{
+    padding: 2px 2px 2px 32px;
+    background-image: url("../icons/edit-find.svg");
+    border-radius: 4px 0 0 4px;
+    border: 2px solid var(--c-white-008);
+}
+#mainWindowTabs{
+    margin: 0px 8px 0 0;
+    border-radius: 0 4px 4px 0;
+    border: 2px solid var(--c-white-008);
+    border-left: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.tab-menu>li,
+#mainWindowTabs.toolbarTabs li,
+#propertiesTabs li{
+    background: linear-gradient(var(--c-white-008),var(--c-black-020)) !important;
+    margin: -2px 0 !important;
+    padding: 4px 12px !important;
+}
+.tab-menu li.selected,
+#mainWindowTabs.toolbarTabs li.selected,
+#propertiesTabs li.selected{
+    background: var(--c-accent-050) linear-gradient(var(--c-black-020),var(--c-white-008)) !important;
+    box-shadow: 0 0 0 2px var(--c-black-020),inset 0 0 0 2px var(--c-white-016);
+}
+.propertiesPanel{
+    box-shadow: 0 0 0 2px var(--c-black-020)/*,inset 0 0 0 2px var(--c-white-016);*/
+}
+#mainWindowTabs.toolbarTabs,
+#mainWindowTabs.toolbarTabs *{
+    border-collapse: collapse !important;
+}
+#mainWindowTabs.toolbarTabs li{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 !important;
+}
+#mainWindowTabs.toolbarTabs li:last-child{
+    border-radius: 0 4px 4px 0 !important;
+}
+#mainWindowTabs.toolbarTabs li.selected{
+    box-shadow: inset 0 0 0 2px var(--c-white-016);
+}
+#mainWindowTabs .tab-menu li a {
+    padding: 0 !important;
+}
+#mainWindowTabs.toolbarTabs {
+    padding: 0 !important;
+}
+#downloadPage_contentWrapper,
+#uploadPage_contentWrapper{
+    width: 80vw;
+}
+#downloadForm .settings table,
+#uploadForm .settings table{
+    width: 80%;
+}
+#downloadForm #submitButton,
+#uploadForm button[type="submit"]{
+    padding: 10px 50px;
+    font-size: 18px;
+    border: 2px solid var(--c-black-060);
+    background: linear-gradient(176deg,var(--c-accent),var(--c-accentDark));
+    box-shadow: 1px 1px 8px var(--c-black-060),0 0 0 2px var(--c-black-020),inset 0 0 0 2px var(--c-white-016);
+    border-radius: 3px;
+    border: none !important;
+    color: var(--c-accentLight);
+    text-shadow: -1px -1px 0 var(--c-white-080),1px 1px 0 var(--c-black-060);
+    text-transform: uppercase;
+    margin-top: 12px;
+}
+#downloadForm .settings table tbody tr td input[type="checkbox"],
+#uploadForm .settings table tbody tr td input[type="checkbox"]{
+    transform:scale(1.4);
+}
+#downloadForm .settings table tbody tr td .select-watched-folder-editable,
+#downloadForm .settings table tbody tr td select,
+#downloadForm .settings table tbody tr td input[type="text"],
+#uploadForm .settings table tbody tr td .select-watched-folder-editable,
+#uploadForm .settings table tbody tr td select,
+#uploadForm .settings table tbody tr td input[type="text"]{
+    width: 100% !important;
+    box-sizing: border-box;
+}
+#downloadForm .settings table tbody tr td select,
+#downloadForm .settings table tbody tr td input[type="text"],
+#uploadForm .settings table tbody tr td select,
+#uploadForm .settings table tbody tr td input[type="text"]{
+    border: 1px solid var(--c-white-016) !important;
+}
+#downloadForm .settings table tbody tr td .select-watched-folder-editable select+input[type="text"],
+#upoadForm .settings table tbody tr td .select-watched-folder-editable select+input[type="text"]{
+    width: calc(100% - 19px) !important;
+    border: none !important;
+}
+#downloadForm .settings table tbody tr td .select-watched-folder-editable select,
+#uploadForm .settings table tbody tr td .select-watched-folder-editable select{
+    border-color: var(--c-white-016) !important;
+    /*-webkit-appearance: none !important;*/
+    /*-moz-appearance: none !important;*/
+    /*-ms-appearance: none !important;*/
+    /*-o-appearance: none !important;*/
+    /*appearance: none !important;*/
+}
+#downloadForm .settings table tbody tr td:nth-child(1),
+#uploadForm .settings table tbody tr td:nth-child(1){
+    width: 33% !important;
+}
+#filtersColumn_handle {
+    margin-left: 0;
+}
+.horizontalHandle,.columnHandle {
+    border: none;
+    background: var(--c-white-008) !important;
+}
+.horizontalHandle:hover,.columnHandle:hover {
+    background: var(--c-white-016) !important;
+}
+.horizontalHandle{
+    height: 6px;
+}
+.columnHandle {
+    width: 6px;
+}
+/*progressbar border*/
+.torrentsTableContextMenuTarget div.progressbar_wrapper {
+    border-radius: 3px;
+    overflow: hidden;
+    height: 16px !important;
+}
+.torrentsTableContextMenuTarget:nth-child(odd) {
+    background: var(--c-black-020) !important;
+}
+.torrentsTableContextMenuTarget:nth-child(even) {
+    background: var(--c-white-016) !important;
+}
+.torrentsTableContextMenuTarget {
+    line-height: 26px;
+    font-size: 13px;
+}
+.torrentsTableContextMenuTarget div.progressbar_wrapper {
+    border: 1px solid var(--c-black-060) !important;
+}
+/* % completed */
+div.progressbar_wrapper div.progressbar_dark {
+    background: linear-gradient(var(--c-accent),var(--c-accentDark)) !important;
+    box-shadow: inset 0 0 0 1px var(--c-white-016);
+    color: var(--color-White) !important;
+}
+/* % remaining */
+div.progressbar_wrapper div.progressbar_light {
+    background: linear-gradient(var(--c-black-010),var(--c-white-016)) !important;
+    box-shadow: inset 0 0 0 1px var(--c-white-008);
+    color: var(--color-White) !important;
+}
+#mochaToolbar .mochaToolButton,
+#torrentsTableMenu.contextMenu img,
+#desktopHeader #desktopNavbar img,
+#addTrackersPlus {
+    filter: brightness(160%) grayscale(20%) !important;
+}
+div .mochaTitlebar,div .mochaTitlebar.replaced {
+    background-color: var(--c-accentDark) !important;
+    /*background-image: linear-gradient(var(--c-white-016),var(--c-black-010)) !important;*/
+}
+/*div.mochaContentBorder{*/
+    /*box-shadow: inset 0 0 0 2px var(--c-white-016) !important;*/
+    /*border: 2px solid #4a4a4a !important;*/
+/*}*/
+
+
+
+/* 03.2k23 */
+
+
+#desktopHeader {
+  position: relative;
+}
+#desktopHeader #desktopNavbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  opacity: 0;
+  z-index: 1;
+  box-shadow: 0 3px 12px 0 hsla(0,0%,0%,.6);
+  transition: bottom .25s ease-in,opacity .32s ease-in;
+  overflow: visible;
+}
+#desktopHeader:hover #desktopNavbar {
+  bottom: -2.25rem;
+  opacity: 1;
+}
+#desktopHeader #desktopNavbar>ul {
+	display: flex;
+	padding: 0 .5rem;
+}
+#desktopHeader #desktopNavbar>ul>li {
+	float: none;
+}
+#desktopHeader #desktopNavbar>ul>li>a {
+	padding: .5rem 1rem;
+}
+#desktopHeader #desktopNavbar>ul>li ul>li>a {
+	padding: .75rem 1rem .75rem 2rem;
+}
+#desktopHeader #mochaToolbar {
+  z-index: 2;
+}
+.piecesbarWrapper {
+  border-radius: .2rem;
+  overflow: hidden;
+  border: none !important;
+}
+
+.piecesbarWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(hsla(0,0%,100%,.06),hsl(0, 0%,0%,.18)) !important;
+  box-shadow: inset 0 0 0 1px var(--c-white-016);
+  border-radius: .2rem;
+}
+.piecesbarCanvas {
+  filter: hue-rotate(-56deg) saturate(84%) brightness(186%);
+}
+hr{
+	color: black;
+	background: black;
+	box-shadow: 0 1px 0 0 hsla(0,0%,100%,.1);
+}
+
+
+
+
+
+
     /* Dark qBittorrent WebUI by Felix
     
             1.0.0 (03/06/2018) - first release
@@ -120,12 +413,14 @@
     #propertiesPanel_headerContent {
         padding-top: 3px !important;
     }
+/*
     #prop_general fieldset,
     #watched_folders_tab tr,
     #watched_folders_tab th,
     #watched_folders_tab td {
         border-color: var(--color-White) !important;
     }
+*/
     #desktopFooter {
         background: var(--color-Dark) !important;
         border: 1px solid var(--color-Grey) !important;
@@ -258,6 +553,7 @@
         border-color: var(--color-White);
         color: var(--color-White) !important;
     }
+/*
     input,
     textarea {
         background: var(--color-Grey) !important;
@@ -265,6 +561,7 @@
         border: 0px;
         white-space: nowrap;
     }
+*/
     input::placeholder {
         color: var(--color-White) !important;
     }
