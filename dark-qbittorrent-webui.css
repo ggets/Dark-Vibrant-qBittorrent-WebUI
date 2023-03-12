@@ -238,11 +238,13 @@ div .mochaTitlebar,div .mochaTitlebar.replaced {
   z-index: 1;
   box-shadow: 0 3px 12px 0 hsla(0,0%,0%,.6);
   transition: bottom .25s ease-in,opacity .32s ease-in;
+  transition-delay: .5s;
   overflow: visible;
 }
 #desktopHeader:hover #desktopNavbar {
   bottom: -2.25rem;
   opacity: 1;
+  transition-delay: 0s;
 }
 #desktopHeader #desktopNavbar>ul {
 	display: flex;
