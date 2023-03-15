@@ -2,7 +2,7 @@
 	
 			1.0.0 (03/06/2018) - first release
 			2.0.0 (12/03/2023) - 1st mod release
-			2.0.4 (15/03/2023) - 2nd mod release (latest)
+			2.0.5 (15/03/2023) - 2nd mod release (latest)
 	
 ----------------------------------------------------------------------------------------------*/
 /*#desktopNavbar{display:none;}*/
@@ -14,20 +14,20 @@
 	--c-accentLight-050: hsla(210,75%,60%,.50);
 	--c-accentDark: hsla(210,75%,40%,1);
 	--c-accentDark-050: hsla(210,75%,40%,.50);
-	--c-black-060: hsla(0,0%,0%,.60);
-	--c-black-020: hsla(0,0%,0%,.20);
-	--c-black-010: hsla(0,0%,0%,.10);
-	--c-white-008: hsla(0,0%,100%,.08);
-	--c-white-016: hsla(0,0%,100%,.16);
-	--c-white-080: hsla(0,0%,100%,.80);
-	--c-white-100: hsla(0,0%,100%,1);
-}
-td.statusBarSeparator{
-	background: var(--color-Grey) !important;
-	width: 0px;
-}
-#torrentsTableMenu{
-	box-shadow: 0px 0px 0px 2px hsla(0,0%,0%,.4),0px 4px 6px 0px hsla(0,0%,0%,.4);
+	--c-black-080:		hsla(0,0%,0%,.80);
+	--c-black-060:		hsla(0,0%,0%,.60);
+	--c-black-040:		hsla(0,0%,0%,.40);
+	--c-black-020:		hsla(0,0%,0%,.20);
+	--c-black-010:		hsla(0,0%,0%,.10);
+	--c-dark-080:			hsla(0,0%,8%,.80);
+	--c-dark-060:			hsla(0,0%,8%,.60);
+	--c-dark-040:			hsla(0,0%,8%,.40);
+	--c-dark-020:			hsla(0,0%,8%,.20);
+	--c-dark-010:			hsla(0,0%,8%,.10);
+	--c-white-008:		hsla(0,0%,100%,.08);
+	--c-white-016:		hsla(0,0%,100%,.16);
+	--c-white-080:		hsla(0,0%,100%,.80);
+	--c-white-100:		hsla(0,0%,100%,1);
 }
 #prop_general fieldset,
 #watched_folders_tab tr,
@@ -254,18 +254,21 @@ div .mochaTitlebar,div .mochaTitlebar.replaced {
 	left: 32vw;
 	right: 32vw;
 	height: auto;
-	opacity: .5;
+/*	opacity: .5;*/
 	z-index: 3;
-	box-shadow: inset 0 0 0 1px var(--c-accentDark-050),0 3px 12px 0 hsla(0,0%,0%,.6);
 	transition: top .25s ease-in,opacity .32s ease-in;
 	transition-delay: .4s;
 	overflow: visible;
 	border-radius: 0 0 .5rem .5rem;
-	background-image: linear-gradient(var(--color-Dark), #111 90%,var(--c-accentDark-050) 96%,var(--c-accent-050) 98%) !important;
+	background-image: linear-gradient(transparent, var(--c-black-040) 90%,var(--c-accentDark-050) 96%,var(--c-accent-050) 98%) !important;
 	background-size: 100% 100% !important;
 	background-position: 0 0 !important;
 	background-repeat: repeat !important;
+	background-color: var(--c-dark-010) !important;
 	border-color: var(--c-accent);
+	border: none;
+	box-shadow: inset 0 0 0 1px var(--c-accentDark-050),inset 0 -2px 0 0 var(--c-accent),0 3px 12px 0 hsla(0,0%,0%,.6);
+	backdrop-filter: blur(4px);
 }
 #desktopHeader #desktopNavbar:hover {
 	top: -.5rem;
@@ -274,7 +277,10 @@ div .mochaTitlebar,div .mochaTitlebar.replaced {
 }
 #desktopHeader #desktopNavbar>ul {
 	display: flex;
-	padding: .3rem .5rem 0;
+	padding: .3rem .5rem .35rem;
+	backdrop-filter: blur(3px);
+	border-radius: 0 0 .5rem .5rem;
+	box-shadow: inset 0 0 0 1px var(--c-accentDark-050),inset 0 -1px 0 0 var(--c-accent-050),0 3px 12px 0 hsla(0,0%,0%,.6);
 }
 #desktopHeader #desktopNavbar>ul>li {
 	float: none;
@@ -282,8 +288,27 @@ div .mochaTitlebar,div .mochaTitlebar.replaced {
 #desktopHeader #desktopNavbar>ul>li>a {
 	padding: .5rem 1rem;
 }
-#desktopHeader #desktopNavbar>ul>li ul>li>a {
+#desktopHeader #desktopNavbar>ul>li ul,
+body .contextMenu{
+	border: none !important;
+	border-radius: .25rem !important;
+	background: var(--c-dark-040) linear-gradient(var(--c-black-010),var(--c-black-060)) !important;
+	backdrop-filter: blur(6px);
+	box-shadow: inset 0 0 0 1px var(--c-white-008),0 0 0 1px var(--c-black-080),2px 2px 6px 0 var(--c-black-080) !important;
+	overflow: hidden;
+}
+#desktopHeader #desktopNavbar>ul>li ul>li>a{
 	padding: .75rem 1rem .75rem 2rem;
+}
+body .contextMenu>li>a{
+	padding: .6rem 1rem !important;
+}
+.contextMenu .separator {
+	border-top: 1px solid var(--c-white-008) !important;
+}
+#desktopHeader #desktopNavbar li a:hover,
+body .contextMenu>li>a:hover{ /* add body to override Felix's setting */
+	background: var(--c-white-008) !important;
 }
 #desktopHeader #mochaToolbar {
 	z-index: 2;
@@ -319,8 +344,11 @@ hr{
 #desktopFooterWrapper{
 	box-shadow: 0 -2px 3px 0px hsla(0,0%,0%,.32);
 }
-body #desktopFooter{ /* add body to override Felix's setting */
+body #desktopFooter, /* add body to override Felix's setting */
+body #mochaToolbar{	
 	background: var(--color-Dark) linear-gradient(transparent,var(--c-black-020)) !important;
+}
+body #desktopFooter{ /* add body to override Felix's setting */
 	padding: 0 1rem 3px;
 	border: 1px solid var(--c-white-008) !important;
 	text-shadow: 2px 2px 3px hsl(0, 0%, 0%);
@@ -355,6 +383,13 @@ body select{
 body{
 	text-shadow: 1px 1px 2px hsla(0, 0%, 0%,.6);
 }
+body .panel-header,
+body .panel-headerContent,
+body .toolbarTabs {
+	background-color: hsla(0,0%,100%,.02) !important;
+}
+
+
 
 
 
@@ -638,7 +673,7 @@ body{
 	/* VERSION
 ----------------------------------------------------------------------------------------------*/
 	div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-		content: '\Awith "Dark qBittorrent WebUI" v2.0.4 by Felix && GGets';
+		content: '\Awith "Dark qBittorrent WebUI" v2.0.5 by Felix && GGets';
 		white-space: pre;
 		font-weight: normal;
 		color: darkgreen;
