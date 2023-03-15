@@ -2,7 +2,7 @@
 	
 			1.0.0 (03/06/2018) - first release
 			2.0.0 (12/03/2023) - 1st mod release
-			2.0.2 (15/03/2023) - 2nd mod release (latest)
+			2.0.3 (15/03/2023) - 2nd mod release (latest)
 	
 ----------------------------------------------------------------------------------------------*/
 /*#desktopNavbar{display:none;}*/
@@ -344,7 +344,13 @@ body .columnHandle { /* add body to override Felix's setting */
 	background: var(--c-white-008) !important;
 	border-color: var(--c-white-008) !important;
 }
-
+body select{
+	background: var(--c-black-010);
+	border-color: var(--c-accentDark-050);
+	color: var(--color-White) !important;
+	border-radius: .25rem;
+	padding: .12rem .5rem;
+}
 
 
 
@@ -628,7 +634,7 @@ body .columnHandle { /* add body to override Felix's setting */
 	/* VERSION
 ----------------------------------------------------------------------------------------------*/
 	div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-		content: '\Awith "Dark qBittorrent WebUI" v2.0.2 by Felix && GGets';
+		content: '\Awith "Dark qBittorrent WebUI" v2.0.3 by Felix && GGets';
 		white-space: pre;
 		font-weight: normal;
 		color: darkgreen;
