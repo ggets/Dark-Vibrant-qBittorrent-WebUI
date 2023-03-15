@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Dark Vibrant qBittorrent WebUI
-@version        2.0.5
+@version        2.0.6
 @namespace      https://github.com/ggets/
 @description    A darker (yet vibrant) theme for qBittorrent WebUI (improved iFelix18 theme, ispired by Cozzy's theme: userstyles.org/styles/152766)
 @author         Felix & GGets
@@ -15,7 +15,7 @@
 
 				1.0.0 (03/06/2018) - first release
 				2.0.0 (12/03/2023) - 1st mod release
-				2.0.5 (15/03/2023) - 2nd mod release (latest)
+				2.0.6 (15/03/2023) - 2nd mod release (latest)
 
 	----------------------------------------------------------------------------------------------*/
 	/*#desktopNavbar{display:none;}*/
@@ -686,7 +686,7 @@
 	/* VERSION
 	----------------------------------------------------------------------------------------------*/
 	div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-		content: '\Awith "Dark qBittorrent WebUI" v2.0.5 by Felix && GGets';
+		content: '\Awith "Dark qBittorrent WebUI" v2.0.6 by Felix && GGets';
 		white-space: pre;
 		font-weight: normal;
 		color: darkgreen;
