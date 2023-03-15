@@ -2,7 +2,7 @@
 	
 			1.0.0 (03/06/2018) - first release
 			2.0.0 (12/03/2023) - 1st mod release
-			2.0.1 (15/03/2023) - 2nd mod release (latest)
+			2.0.2 (15/03/2023) - 2nd mod release (latest)
 	
 ----------------------------------------------------------------------------------------------*/
 /*#desktopNavbar{display:none;}*/
@@ -35,15 +35,21 @@ td.statusBarSeparator{
 #watched_folders_tab td {
 	border-color: var(--color-Grey) !important;
 }
-input,
-textarea {
+body input, /* add body to override Felix's setting */
+body textarea { /* add body to override Felix's setting */
 	color: var(--color-White) !important;
 	border: 0px;
 	/*white-space: nowrap;*/
-	background-color: var(--color-Grey) !important;
-	background-repeat: no-repeat;
-	background-size: 1.5em;
-	background-position: left;
+	background-repeat: no-repeat !important;
+	background-size: 100% 100% !important;
+	background-position: 0 0 !important;
+	background-color: transparent !important;
+	background-image: linear-gradient(var(--c-black-060),var(--c-black-020)) !important;
+	padding: .2rem;
+	border-radius: .25rem;
+}
+#torrentFilesFilterToolbar{
+	margin: .125rem 0;
 }
 #torrentsFilterToolbar{
 	margin: 0 0 0 8px;
@@ -51,24 +57,36 @@ textarea {
 #torrentsFilterToolbar input{
 	padding: 2px 2px 2px 32px;
 	background-image: url("../icons/edit-find.svg");
-	border-radius: 4px 0 0 4px;
+	border-radius: .25rem 0 0 .25rem;
 	border: 2px solid var(--c-white-008);
 }
 #mainWindowTabs{
 	margin: 0px 8px 0 0;
-	border-radius: 0 4px 4px 0;
+	border-radius: 0 .25rem .25rem 0;
 	border: 2px solid var(--c-white-008);
 	border-left: none;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
+body .toolbarTabs { /* add body to override Felix's setting */
+	margin-top: -2px;
+	background: linear-gradient(var(--c-white-008),var(--c-black-020)) !important;
+	border-radius: .5rem 0 0;
+	background-position: 2px 0 !important;
+	background-repeat: no-repeat !important;
+}
 .tab-menu>li,
 #mainWindowTabs.toolbarTabs li,
 #propertiesTabs li{
-	background: linear-gradient(var(--c-white-008),var(--c-black-020)) !important;
-	margin: -2px 0 !important;
+	background: transparent !important;
+	margin: 0px 1px !important;
 	padding: 4px 12px !important;
+	box-shadow: inset -1px -1px 0 0 hsla(0,0%,0%,.3),inset 1px 1px 0 0 hsla(0,0%,100%,.1);
+	border-radius: .25rem .25rem 0 0;
+}
+#mainWindowTabs.toolbarTabs li{
+	margin: -2px 1px !important;
 }
 .tab-menu li.selected,
 #mainWindowTabs.toolbarTabs li.selected,
@@ -175,12 +193,6 @@ textarea {
 .columnHandle {
 	width: 6px;
 }
-/*progressbar border*/
-.torrentsTableContextMenuTarget div.progressbar_wrapper {
-	border-radius: 3px;
-	overflow: hidden;
-	height: 16px !important;
-}
 .torrentsTableContextMenuTarget:nth-child(odd) {
 	background: var(--c-black-020) !important;
 }
@@ -191,8 +203,15 @@ textarea {
 	line-height: 26px;
 	font-size: 13px;
 }
-.torrentsTableContextMenuTarget div.progressbar_wrapper {
+/*progressbar border*/
+div.progressbar_wrapper {
+	border-radius: 3px;
+	overflow: hidden;
+	height: 16px !important;
 	border: 1px solid var(--c-black-060) !important;
+}
+body div.progressbar_wrapper { /* add body to override Felix's setting */
+	border-color: var(--c-black-060) !important;
 }
 /* % completed */
 div.progressbar_wrapper div.progressbar_dark {
@@ -242,7 +261,7 @@ div .mochaTitlebar,div .mochaTitlebar.replaced {
 	transition-delay: .4s;
 	overflow: visible;
 	border-radius: 0 0 .5rem .5rem;
-	background-image: linear-gradient(to bottom,var(--color-Dark), #111 90%,var(--c-accentDark-050) 96%,var(--c-accent-050) 98%) !important;
+	background-image: linear-gradient(var(--color-Dark), #111 90%,var(--c-accentDark-050) 96%,var(--c-accent-050) 98%) !important;
 	background-size: 100% 100% !important;
 	background-position: 0 0 !important;
 	background-repeat: repeat !important;
@@ -294,8 +313,37 @@ hr{
 	background: black;
 	box-shadow: 0 1px 0 0 hsla(0,0%,100%,.1);
 }
-
-
+.panel-header .toolbox{
+	margin-top: 1px;
+}
+#desktopFooterWrapper{
+	box-shadow: 0 -2px 3px 0px hsla(0,0%,0%,.32);
+}
+body #desktopFooter{ /* add body to override Felix's setting */
+	background: var(--color-Dark) linear-gradient(transparent,var(--c-black-020)) !important;
+	padding: 0 1rem 3px;
+	border: 1px solid var(--c-white-008) !important;
+}
+#desktopFooter>span#error_div{
+	margin-top:	3px;
+}
+#desktopFooter>table{
+	right: 1rem;
+}
+#desktopFooter>table>tbody>tr>td{
+	padding: 1px .25rem;
+}
+#desktopFooter>table>tbody>tr>td.statusBarSeparator {
+	background: transparent !important;
+	box-shadow: inset -1px -1px 0 0 hsla(0,0%,0%,.3),inset 1px 1px 0 0 hsla(0,0%,100%,.1);
+	width: 2px;
+	padding: 0;
+}
+body .horizontalHandle, /* add body to override Felix's setting */
+body .columnHandle { /* add body to override Felix's setting */
+	background: var(--c-white-008) !important;
+	border-color: var(--c-white-008) !important;
+}
 
 
 
@@ -580,7 +628,7 @@ hr{
 	/* VERSION
 ----------------------------------------------------------------------------------------------*/
 	div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-		content: '\Awith "Dark qBittorrent WebUI" v1.0.0 by Felix';
+		content: '\Awith "Dark qBittorrent WebUI" v2.0.2 by Felix && GGets';
 		white-space: pre;
 		font-weight: normal;
 		color: darkgreen;
