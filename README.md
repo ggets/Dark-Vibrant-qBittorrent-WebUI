@@ -20,14 +20,14 @@
 [version]: https://img.shields.io/badge/version-1.0.0-ED1C24.svg?longCache=true&style=flat-square
 [1]: #
 [stylus]: https://img.shields.io/badge/install%20directly%20with-Stylus-00adad.svg?longCache=true&style=flat-square "Click here!"
-[2]: https://raw.githubusercontent.com/ggets/Dark-qBittorrent-WebUI/master/dark-qbittorrent-webui.user.css
+[2]: https://raw.githubusercontent.com/ggets/Dark-Vibrant-qBittorrent-WebUI/master/dark-qbittorrent-webui.user.css
 [userstyles]: https://img.shields.io/badge/dynamic/json.svg?label=userstyles.org%20installations&url=https%3A%2F%2Fwidget.userstyles.org%2Fstyles%2F160858%2Fdark-qbittorrent-webui.json&query=total_installs&colorB=e51ced&longCache=true&style=flat-square
 [3]: https://userstyles.org/styles/160858/dark-qbittorrent-webui
-[stars]: https://img.shields.io/github/stars/ggets/Dark-qBittorrent-WebUI.svg?longCache=true&style=flat-square
-[4]: https://github.com/ggets/Dark-qBittorrent-WebUI/stargazers
-[issues]: https://img.shields.io/github/issues/ggets/Dark-qBittorrent-WebUI.svg?longCache=true&style=flat-square
-[5]: https://github.com/ggets/Dark-qBittorrent-WebUI/issues
-[license]: https://img.shields.io/github/license/ggets/Dark-qBittorrent-WebUI.svg?longCache=true&style=flat-square
+[stars]: https://img.shields.io/github/stars/ggets/Dark-Vibrant-qBittorrent-WebUI.svg?longCache=true&style=flat-square
+[4]: https://github.com/ggets/Dark-Vibrant-qBittorrent-WebUI/stargazers
+[issues]: https://img.shields.io/github/issues/ggets/Dark-Vibrant-qBittorrent-WebUI.svg?longCache=true&style=flat-square
+[5]: https://github.com/ggets/Dark-Vibrant-qBittorrent-WebUI/issues
+[license]: https://img.shields.io/github/license/ggets/Dark-Vibrant-qBittorrent-WebUI.svg?longCache=true&style=flat-square
 [6]: https://creativecommons.org/licenses/by-sa/4.0/
 [Cozzy's theme]: https://userstyles.org/styles/152766/
 [preview]: https://user-images.githubusercontent.com/4815620/225387573-ae428e95-aa6d-4c96-9129-894c973a819b.png
