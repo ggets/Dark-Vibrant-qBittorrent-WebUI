@@ -2,7 +2,7 @@
 	
 			1.0.0 (03/06/2018) - first release
 			2.0.0 (12/03/2023) - 1st mod release
-			2.0.3 (15/03/2023) - 2nd mod release (latest)
+			2.0.4 (15/03/2023) - 2nd mod release (latest)
 	
 ----------------------------------------------------------------------------------------------*/
 /*#desktopNavbar{display:none;}*/
@@ -323,6 +323,7 @@ body #desktopFooter{ /* add body to override Felix's setting */
 	background: var(--color-Dark) linear-gradient(transparent,var(--c-black-020)) !important;
 	padding: 0 1rem 3px;
 	border: 1px solid var(--c-white-008) !important;
+	text-shadow: 2px 2px 3px hsl(0, 0%, 0%);
 }
 #desktopFooter>span#error_div{
 	margin-top:	3px;
@@ -335,7 +336,7 @@ body #desktopFooter{ /* add body to override Felix's setting */
 }
 #desktopFooter>table>tbody>tr>td.statusBarSeparator {
 	background: transparent !important;
-	box-shadow: inset -1px -1px 0 0 hsla(0,0%,0%,.3),inset 1px 1px 0 0 hsla(0,0%,100%,.1);
+	box-shadow: inset 1px 1px 0 0 hsla(0,0%,0%,.3),inset -1px -1px 0 0 hsla(0,0%,100%,.05);
 	width: 2px;
 	padding: 0;
 }
@@ -350,6 +351,9 @@ body select{
 	color: var(--color-White) !important;
 	border-radius: .25rem;
 	padding: .12rem .5rem;
+}
+body{
+	text-shadow: 1px 1px 2px hsla(0, 0%, 0%,.6);
 }
 
 
@@ -634,7 +638,7 @@ body select{
 	/* VERSION
 ----------------------------------------------------------------------------------------------*/
 	div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-		content: '\Awith "Dark qBittorrent WebUI" v2.0.3 by Felix && GGets';
+		content: '\Awith "Dark qBittorrent WebUI" v2.0.4 by Felix && GGets';
 		white-space: pre;
 		font-weight: normal;
 		color: darkgreen;
