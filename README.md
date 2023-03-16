@@ -3,6 +3,7 @@
 
 [![preview1][preview1]][1]
 [![preview2][preview2]][1]
+[![preview3][preview3]][1]
 # Installation (one of two ways)
 1. Download one of these add-ons for your browser
    * Stylus (recommended): [Firefox][7], [Chrome][8],  or [Opera][9].
@@ -18,7 +19,7 @@
    * Edit `<new folder>/private/index.html`.       
      Add `<link rel="stylesheet" type="text/css" href="css/dark-qbittorrent-webui.css?v=${VERSION}" \>` after the other CSS links in header.  
  
-[version]: https://img.shields.io/badge/version-2.1.0-ED1C24.svg?longCache=true&style=flat-square
+[version]: https://img.shields.io/badge/version-2.1.2-ED1C24.svg?longCache=true&style=flat-square
 [1]: #
 [stylus]: https://img.shields.io/badge/install%20directly%20with-Stylus-00adad.svg?longCache=true&style=flat-square "Click here!"
 [2]: https://raw.githubusercontent.com/ggets/Dark-Vibrant-qBittorrent-WebUI/master/dark-qbittorrent-webui.user.css
@@ -33,6 +34,7 @@
 [Cozzy's theme]: https://userstyles.org/styles/152766/
 [preview1]: https://user-images.githubusercontent.com/4815620/225387573-ae428e95-aa6d-4c96-9129-894c973a819b.png
 [preview2]: https://user-images.githubusercontent.com/4815620/225596530-e234764e-49a7-4750-bff8-c96cfd921479.png
+[preview3]: https://user-images.githubusercontent.com/4815620/225600767-1e9b1c65-29b6-4cc2-b3d4-5f6fb5789132.png
 
 [7]: https://addons.mozilla.org/firefox/addon/styl-us/
 [8]: https://chrome.google.com/webstore/detail/clngdbkpkpeebahjckkjfobafhncgmne
