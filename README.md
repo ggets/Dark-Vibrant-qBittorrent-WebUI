@@ -21,8 +21,8 @@
 [1]: #
 [stylus]: https://img.shields.io/badge/install%20directly%20with-Stylus-00adad.svg?longCache=true&style=flat-square "Click here!"
 [2]: https://raw.githubusercontent.com/ggets/Dark-Vibrant-qBittorrent-WebUI/master/dark-qbittorrent-webui.user.css
-[userstyles]: https://img.shields.io/badge/dynamic/json.svg?label=userstyles.org%20installations&url=https%3A%2F%2Fwidget.userstyles.org%2Fstyles%2F160858%2Fdark-qbittorrent-webui.json&query=total_installs&colorB=e51ced&longCache=true&style=flat-square
-[3]: https://userstyles.org/styles/160858/dark-qbittorrent-webui
+[userstyles]: https://img.shields.io/badge/dynamic/json.svg?label=userstyles.org%20installations&url=https%3A%2F%2Fwidget.userstyles.org%2Fstyles%2F261156%2Fdark-vibrant-qbittorrent-webui.json&query=total_installs&colorB=e51ced&longCache=true&style=flat-square
+[3]: https://userstyles.org/styles/261156/dark-vibrant-qbittorrent-webui
 [stars]: https://img.shields.io/github/stars/ggets/Dark-Vibrant-qBittorrent-WebUI.svg?longCache=true&style=flat-square
 [4]: https://github.com/ggets/Dark-Vibrant-qBittorrent-WebUI/stargazers
 [issues]: https://img.shields.io/github/issues/ggets/Dark-Vibrant-qBittorrent-WebUI.svg?longCache=true&style=flat-square
