@@ -1,7 +1,8 @@
 # Dark Vibrant qBittorrent WebUI [![Version][version]][1] [![Install directly with Stylus][stylus]][2] [![userstyles.org installations][userstyles]][3] [![GitHub stars][stars]][4] [![GitHub issues][issues]][5] [![GitHub license][license]][6]
 **_A darker (yet vibrant) theme for qBittorrent WebUI_ (improved iFelix18 theme, ispired by [Cozzy's theme])**
 
-[![preview][preview]][1]
+[![preview1][preview1]][1]
+[![preview2][preview2]][1]
 # Installation (one of two ways)
 1. Download one of these add-ons for your browser
    * Stylus (recommended): [Firefox][7], [Chrome][8],  or [Opera][9].
@@ -30,7 +31,9 @@
 [license]: https://img.shields.io/github/license/ggets/Dark-Vibrant-qBittorrent-WebUI.svg?longCache=true&style=flat-square
 [6]: https://creativecommons.org/licenses/by-sa/4.0/
 [Cozzy's theme]: https://userstyles.org/styles/152766/
-[preview]: https://user-images.githubusercontent.com/4815620/225387573-ae428e95-aa6d-4c96-9129-894c973a819b.png
+[preview1]: https://user-images.githubusercontent.com/4815620/225387573-ae428e95-aa6d-4c96-9129-894c973a819b.png
+[preview2]: https://user-images.githubusercontent.com/4815620/225596530-e234764e-49a7-4750-bff8-c96cfd921479.png
+
 [7]: https://addons.mozilla.org/firefox/addon/styl-us/
 [8]: https://chrome.google.com/webstore/detail/clngdbkpkpeebahjckkjfobafhncgmne
 [9]: https://addons.opera.com/extensions/details/stylus/
