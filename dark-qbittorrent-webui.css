@@ -2,7 +2,7 @@
 	
 			1.0.0 (03/06/2018) - first release
 			2.0.0 (12/03/2023) - 1st mod release
-			2.1.0 (16/03/2023) - 2nd mod release (latest)
+			2.1.2 (16/03/2023) - 2nd mod release (latest)
 	
 ----------------------------------------------------------------------------------------------*/
 /*#filtersColumn,#filtersColumn_handle{display:none;}*/
@@ -164,17 +164,21 @@ body .toolbarTabs { /* add body to override Felix's setting */
 }
 #downloadForm .settings table,
 #uploadForm .settings table{
-	width: 80%;
+	width: 94%;
 }
-#downloadForm #submitButton,
-#uploadForm button[type="submit"]{
-	padding: 10px 50px;
-	font-size: 18px;
+#downloadForm div#submitbutton,
+#uploadForm div#submitbutton {
+	margin-top: 1rem !important;
+	margin-bottom: 1rem;
+}
+#downloadForm button[type="submit"],
+#uploadForm button[type="submit"] {
+	padding: .75rem 4rem;
+	font-size: 1rem !important;
 	border: 2px solid var(--c-black-060);
 	background: linear-gradient(176deg,var(--c-accent-100),var(--c-accentDark-100));
 	box-shadow: 1px 1px 8px var(--c-black-060),0 0 0 2px var(--c-black-020),inset 0 0 0 2px var(--c-white-016);
-	border-radius: 3px;
-	border: none !important;
+	border-radius: .5rem;
 	color: var(--c-accentLight-100);
 	text-shadow: -1px -1px 0 var(--c-white-080),1px 1px 0 var(--c-black-060);
 	text-transform: uppercase;
@@ -210,7 +214,7 @@ body .toolbarTabs { /* add body to override Felix's setting */
 }
 #downloadForm>div:first-child,
 #uploadForm>div:first-child{
-	width: 80%;
+	width: 94%;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: right;
@@ -320,7 +324,7 @@ div .mochaTitlebar,div .mochaTitlebar.replaced {
 }
 #desktopHeader #desktopNavbar {
 	position: absolute;
-	top: -2.1rem;
+	top: -2.2rem;
 	left: 32vw;
 	right: 32vw;
 	height: auto;
@@ -441,7 +445,45 @@ body #desktopFooter{ /* add body to override Felix's setting */
 	text-shadow: 2px 2px 3px hsl(0, 0%, 0%);
 }
 #desktopFooter>span#error_div{
+	color: hsl(0, 100%, 50%);
 	margin-top:	3px;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+	padding-bottom: 7px;
+	padding-left: 4rem;
+	padding-right: 2rem;
+	margin-left: -1.2rem;
+	margin-right: -1.2rem;
+}
+#desktopFooter>span#error_div:not(:empty)::after{
+	background: red;
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	height: 1rem;
+	left: 1rem;
+	right: 1rem;
+	box-shadow: 0 0 .5rem 0 red;
+	border-radius: 120rem;
+	z-index: 5;
+}
+#desktopFooter>span#error_div:not(:empty)::before{
+	content: '';
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIj48cGF0aCBkPSJNNTY5LjUxNyA0NDAuMDEzQzU4Ny45NzUgNDcyLjAwNyA1NjQuODA2IDUxMiA1MjcuOTQgNTEySDQ4LjA1NGMtMzYuOTM3IDAtNTkuOTk5LTQwLjA1NS00MS41NzctNzEuOTg3TDI0Ni40MjMgMjMuOTg1YzE4LjQ2Ny0zMi4wMDkgNjQuNzItMzEuOTUxIDgzLjE1NCAwbDIzOS45NCA0MTYuMDI4ek0yODggMzU0Yy0yNS40MDUgMC00NiAyMC41OTUtNDYgNDZzMjAuNTk1IDQ2IDQ2IDQ2IDQ2LTIwLjU5NSA0Ni00Ni0yMC41OTUtNDYtNDYtNDZ6bS00My42NzMtMTY1LjM0Nmw3LjQxOCAxMzZjLjM0NyA2LjM2NCA1LjYwOSAxMS4zNDYgMTEuOTgyIDExLjM0Nmg0OC41NDZjNi4zNzMgMCAxMS42MzUtNC45ODIgMTEuOTgyLTExLjM0Nmw3LjQxOC0xMzZjLjM3NS02Ljg3NC01LjA5OC0xMi42NTQtMTEuOTgyLTEyLjY1NGgtNjMuMzgzYy02Ljg4NCAwLTEyLjM1NiA1Ljc4LTExLjk4MSAxMi42NTR6Ii8+PC9zdmc+");
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	left: 2rem;
+	top: .1rem;
+	filter: contrast(0%) sepia(200%) saturate(500%) hue-rotate(-20deg) drop-shadow(2px 2px 3px hsl(0, 0%, 0%));
+	background-position: top 0 left 0;
+	z-index: 5;
+	background-color: transparent;
+	background-repeat: no-repeat;
 }
 #desktopFooter>table{
 	right: 1rem;
@@ -598,7 +640,9 @@ body label[for="deleteFromDiskCB"]{
 	font-size: .9rem;
 	padding-left: .5rem;
 }
-
+body #urls{
+	height: 6rem;
+}
 
 
 
@@ -882,7 +926,7 @@ input::placeholder {
 /* VERSION
 ----------------------------------------------------------------------------------------------*/
 div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-	content: '\Awith "Dark qBittorrent WebUI" v2.1.0 by Felix && GGets';
+	content: '\Awith "Dark qBittorrent WebUI" v2.1.2 by Felix && GGets';
 	white-space: pre;
 	font-weight: normal;
 	color: darkgreen;
