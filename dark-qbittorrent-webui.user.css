@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Dark Vibrant qBittorrent WebUI
-@version        2.0.8
+@version        2.1.0
 @namespace      https://github.com/ggets/
 @description    A darker (yet vibrant) theme for qBittorrent WebUI (improved iFelix18 theme, ispired by Cozzy's theme: userstyles.org/styles/152766)
 @author         Felix & GGets
@@ -15,7 +15,7 @@
 
 				1.0.0 (03/06/2018) - first release
 				2.0.0 (12/03/2023) - 1st mod release
-				2.0.8 (15/03/2023) - 2nd mod release (latest)
+				2.1.0 (16/03/2023) - 2nd mod release (latest)
 
 	----------------------------------------------------------------------------------------------*/
 	/*#filtersColumn,#filtersColumn_handle{display:none;}*/
@@ -74,18 +74,12 @@
 	body input, /* add body to override Felix's setting */
 	body textarea { /* add body to override Felix's setting */
 		color: var(--color-White) !important;
-		border: 0px;
 		/*white-space: nowrap;*/
-		background-repeat: no-repeat !important;
-		background-size: 100% 100% !important;
-		background-position: 0 0 !important;
-		background-color: transparent !important;
-		background-image: linear-gradient(var(--c-black-060),var(--c-black-020)) !important;
 		padding: .2rem;
 		border-radius: .25rem;
 	}
 	#torrentFilesFilterToolbar{
-		margin: .125rem 0;
+		margin: 0;
 	}
 	#torrentsFilterToolbar{
 		margin: 0 0 0 8px;
@@ -100,7 +94,6 @@
 	#torrentsFilterToolbar input{
 		padding: 2px 3px 2px 32px;
 		border-radius: .25rem 0 0 .25rem;
-		border: 2px solid var(--c-white-008);
 	}
 	#torrentsFilterToolbar::after,
 	#torrentFilesFilterToolbar::after {
@@ -113,6 +106,9 @@
 		height: 12px;
 		background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNNTA1IDQ0Mi43TDQwNS4zIDM0M2MtNC41LTQuNS0xMC42LTctMTctN0gzNzJjMjcuNi0zNS4zIDQ0LTc5LjcgNDQtMTI4QzQxNiA5My4xIDMyMi45IDAgMjA4IDBTMCA5My4xIDAgMjA4czkzLjEgMjA4IDIwOCAyMDhjNDguMyAwIDkyLjctMTYuNCAxMjgtNDR2MTYuM2MwIDYuNCAyLjUgMTIuNSA3IDE3bDk5LjcgOTkuN2M5LjQgOS40IDI0LjYgOS40IDMzLjkgMGwyOC4zLTI4LjNjOS40LTkuNCA5LjQtMjQuNi4xLTM0ek0yMDggMzM2Yy03MC43IDAtMTI4LTU3LjItMTI4LTEyOCAwLTcwLjcgNTcuMi0xMjggMTI4LTEyOCA3MC43IDAgMTI4IDU3LjIgMTI4IDEyOCAwIDcwLjctNTcuMiAxMjgtMTI4IDEyOHoiLz48L3N2Zz4");
 		filter: contrast(0%);
+	}
+	#torrentFilesFilterToolbar::after {
+		top: 8px;
 	}
 	body #torrentsFilterToolbar input:not(:focus){
 		background-image: none !important;
@@ -214,16 +210,42 @@
 	#downloadForm .settings table tbody tr td input[type="text"],
 	#uploadForm .settings table tbody tr td select,
 	#uploadForm .settings table tbody tr td input[type="text"]{
-		border: 1px solid var(--c-white-016) !important;
+	/*	border: 1px solid var(--c-white-016) !important;*/
+	}
+	#downloadForm .settings table tbody tr td .select-watched-folder-editable,
+	#uploadForm .settings table tbody tr td .select-watched-folder-editable,
+	#downloadForm .settings table tbody tr td .select-watched-folder-editable select+input[type="text"],
+	#uploadForm .settings table tbody tr td .select-watched-folder-editable select+input[type="text"],
+	#downloadForm>div:first-child,
+	#uploadForm>div:first-child{
+		background: none !important;
+		border: none !important;
+	}
+	#downloadForm>div:first-child,
+	#uploadForm>div:first-child{
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: right;
+		padding: 0 .4rem;
+		box-sizing: border-box;
 	}
 	#downloadForm .settings table tbody tr td .select-watched-folder-editable select+input[type="text"],
-	#upoadForm .settings table tbody tr td .select-watched-folder-editable select+input[type="text"]{
+	#uploadForm .settings table tbody tr td .select-watched-folder-editable select+input[type="text"]{
 		width: calc(100% - 19px) !important;
-		border: none !important;
+	}
+	#downloadForm #fileselect,
+	#uploadForm #fileselect{
+		width: calc(66% - .6rem) !important;
+	}
+	#downloadForm .settings table tbody tr td .select-watched-folder-editable,
+	#uploadForm .settings table tbody tr td .select-watched-folder-editable{
+		height: 2rem;
 	}
 	#downloadForm .settings table tbody tr td .select-watched-folder-editable select,
 	#uploadForm .settings table tbody tr td .select-watched-folder-editable select{
-		border-color: var(--c-white-016) !important;
+		bottom: auto;
+	/*	border-color: var(--c-white-016) !important;*/
 		/*-webkit-appearance: none !important;*/
 		/*-moz-appearance: none !important;*/
 		/*-ms-appearance: none !important;*/
@@ -288,6 +310,10 @@
 	#addTrackersPlus {
 		filter: brightness(160%) grayscale(20%) !important;
 	}
+	body .mocha .mochaOverlay{
+		display: flex;
+		flex-direction: column;
+	}
 	div .mochaTitlebar,div .mochaTitlebar.replaced {
 		background-color: var(--c-accentDark-100) !important;
 		/*background-image: linear-gradient(var(--c-white-016),var(--c-black-010)) !important;*/
@@ -329,9 +355,7 @@
 	}
 	#desktopHeader #desktopNavbar:hover {
 		top: -.5rem;
-	}
-	#desktopHeader #desktopNavbar.sss:hover {
-		opacity: 1;
+	/*	opacity: 1;*/
 		transition-delay: 0s;
 		background-image: linear-gradient(transparent, var(--c-black-040) 90%,var(--c-accentDark-050) 96%,var(--c-accent-050) 98%) !important;
 		background-color: var(--c-dark-010) !important;
@@ -345,7 +369,7 @@
 		border-radius: 0 0 .5rem .5rem;
 		box-shadow: inset 0 0 0 1px var(--c-accentDark-020),inset 0 -1px 0 0 var(--c-accent-020),0 3px 12px 0 hsla(0,0%,0%,.3);
 	}
-	#desktopHeader #desktopNavbar.sss:hover>ul {
+	#desktopHeader #desktopNavbar:hover>ul {
 		box-shadow: inset 0 0 0 1px var(--c-accentDark-050),inset 0 -1px 0 0 var(--c-accent-050),0 3px 12px 0 hsla(0,0%,0%,.6);
 	}
 	#desktopHeader #desktopNavbar>ul>li {
@@ -362,7 +386,6 @@
 		background: var(--c-dark-040) linear-gradient(var(--c-black-010),var(--c-black-060)) !important;
 		backdrop-filter: blur(6px);
 		box-shadow: inset 0 0 0 1px var(--c-white-008),0 0 0 1px var(--c-black-080),2px 2px 6px 0 var(--c-black-080) !important;
-	/*	overflow: hidden;*/ /* disables submenu */
 	}
 	#desktopHeader #desktopNavbar>ul>li ul>li>a{
 		padding: .75rem 1rem .75rem 2rem;
@@ -370,6 +393,14 @@
 	body .contextMenu>li>a,
 	body .contextMenu>li>ul>li>a{
 		padding: .6rem 1rem !important;
+	}
+	body .contextMenu>li>a:first-child,
+	body .contextMenu>li>ul>li>a:first-child{
+		border-radius: .25rem .25rem 0 0 !important;
+	}
+	body .contextMenu>li>a:last-child,
+	body .contextMenu>li>ul>li>a:last-child{
+		border-radius: 0 0 .25rem .25rem !important;
 	}
 	.contextMenu .separator {
 		border-top: 1px solid var(--c-white-008) !important;
@@ -431,11 +462,25 @@
 	#desktopFooter>table>tbody>tr>td{
 		padding: 1px .25rem;
 	}
-	#desktopFooter>table>tbody>tr>td.statusBarSeparator {
+	#desktopFooter>table>tbody>tr>td.statusBarSeparator{
 		background: transparent !important;
 		box-shadow: inset 1px 1px 0 0 hsla(0,0%,0%,.3),inset -1px -1px 0 0 hsla(0,0%,100%,.05);
 		width: 2px;
 		padding: 0;
+	}
+	#mochaToolbar .divider::after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		background: transparent !important;
+		box-shadow: inset 1px 1px 0 0 hsla(0,0%,0%,.6),inset -1px -1px 0 0 hsla(0,0%,100%,.07);
+		width: 2px;
+		height: 90%;
+		left: 0;
+	}
+	body #mochaToolbar .divider{
+		background: transparent !important;
+		position: relative !important;
 	}
 	body .horizontalHandle, /* add body to override Felix's setting */
 	body .columnHandle { /* add body to override Felix's setting */
@@ -443,8 +488,8 @@
 		border-color: var(--c-white-008) !important;
 	}
 	body select{
-		background: var(--c-black-010);
-		border-color: var(--c-accentDark-050);
+	/*	background: var(--c-black-010);*/
+	/*	border-color: var(--c-accentDark-050);*/
 		color: var(--color-White) !important;
 		border-radius: .25rem;
 		padding: .12rem .5rem;
@@ -457,7 +502,115 @@
 	body .toolbarTabs {
 		background-color: hsla(0,0%,100%,.02) !important;
 	}
+	body input[type="text"],
+	body input[type="file"],
+	body select,
+	body textarea{
+		background-repeat: no-repeat !important;
+		background-size: 100% 100% !important;
+		background-position: 0 0 !important;
+		background-color: var(--c-dark-080) !important;
+		background-image: linear-gradient(var(--c-black-040),var(--c-black-020)) !important;
+		border: 2px solid var(--c-white-008) !important;
+	}
+	body input[type="text"]:hover,
+	body input[type="file"]:hover,
+	body select:hover,
+	body textarea:hover{
+		background-image: linear-gradient(var(--c-black-060),var(--c-black-020)) !important;
+		border: 2px solid var(--c-white-016) !important;
+	}
+	body input[type="text"]:focus,
+	body input[type="file"]:focus,
+	body select:focus,
+	body textarea:focus{
+		background-image: linear-gradient(var(--c-black-080),var(--c-black-020)) !important;
+		border: 2px solid var(--c-accent-050) !important;
+	}
 
+	html:first-child,html body{
+		background: transparent !important;
+	}
+	body #desktop{
+		background: var(--color-Dark) !important;
+	}
+	.mochaContentOverlay{
+		display: flex;
+		flex-direction: column;
+	}
+	.mochaContentBorder,
+	body .mochaTitlebar.replaced{
+		background: var(--c-dark-040) linear-gradient(var(--c-black-010),var(--c-black-060)) !important;
+		backdrop-filter: blur(6px);
+	}
+	body .mochaTitlebar.replaced{
+		background-color: var(--c-accent-060) !important;
+		padding: .25rem .125rem;
+	}
+	.mochaContentBorder{
+		border-bottom: none;
+		flex-grow: 1;
+		margin-bottom: 11px;
+	}
+	body .mocha.replaced{
+		min-width: 25vw;
+	}
+	body .mocha.replaced#confirmDeletionPage{
+		min-width: 38rem;
+	}
+	body .mocha::after{
+		box-shadow: inset 0 0 0 1px var(--c-white-008),0 0 0 1px var(--c-black-080),2px 2px 6px 0 var(--c-black-080) !important;
+	}
+	body .mochaContentWrapper{
+		background: transparent !important;
+		width: calc(100% - 2rem - 2px) !important;
+		padding: 1rem !important;
+	}
+	body .mochaContentWrapper
+	body .mochaContent,
+	body .mochaIframe {
+		min-height: 100% !important;
+	}
+	body .mochaIframe {
+		height: 100% !important;
+	}
+	.mochaTitlebar{
+		min-width: calc(100% - 6px) !important;
+		width: calc(100% - 6px) !important;
+		box-shadow: inset 0 0 0 1px var(--c-accentDark-060);
+		min-height: 25px;
+		flex-shrink: 0;
+	}
+	.mochaOverlay{
+		min-width: calc(100% - 8px) !important;
+		width: calc(100% - 8px) !important;
+	}
+	body input[type="button"]{
+		background: linear-gradient(var(--c-white-008),var(--c-black-020)) !important;
+		padding: .75rem 1rem !important;
+		box-shadow: inset -1px -1px 0 0 hsla(0,0%,0%,.3),inset 1px 1px 0 0 hsla(0,0%,100%,.1);
+		border-radius: .25rem;
+		border: none;
+	}
+	.mochaControls,
+	.mochaCanvasControls{
+		top: 13px !important;
+		right: 15px !important;
+	}
+
+	body>br:first-child+p{ /* Address the mocha dialogs. Need to find a better way. */
+		margin-top: -.5rem;
+		margin-bottom: .5rem;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+	body #deleteFromDiskCB{
+		transform:scale(1.4);
+	}
+	body label[for="deleteFromDiskCB"]{
+		font-size: .9rem;
+		padding-left: .5rem;
+	}
 
 
 
@@ -742,7 +895,7 @@
 	/* VERSION
 	----------------------------------------------------------------------------------------------*/
 	div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-		content: '\Awith "Dark qBittorrent WebUI" v2.0.8 by Felix && GGets';
+		content: '\Awith "Dark qBittorrent WebUI" v2.1.0 by Felix && GGets';
 		white-space: pre;
 		font-weight: normal;
 		color: darkgreen;
