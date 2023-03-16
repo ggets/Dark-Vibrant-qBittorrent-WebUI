@@ -1,4 +1,4 @@
-# Dark qBittorrent WebUI [![Version][version]][1] [![Install directly with Stylus][stylus]][2] [![userstyles.org installations][userstyles]][3] [![GitHub stars][stars]][4] [![GitHub issues][issues]][5] [![GitHub license][license]][6]
+# Dark Vibrant qBittorrent WebUI [![Version][version]][1] [![Install directly with Stylus][stylus]][2] [![userstyles.org installations][userstyles]][3] [![GitHub stars][stars]][4] [![GitHub issues][issues]][5] [![GitHub license][license]][6]
 **_A darker theme for qBittorrent WebUI_ (ispired by [Cozzy's theme])**
 
 [![preview][preview]][1]
