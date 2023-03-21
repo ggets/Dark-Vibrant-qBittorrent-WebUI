@@ -4,6 +4,7 @@
 [![preview1][preview1]][1]
 [![preview2][preview2]][1]
 [![preview3][preview3]][1]
+[![preview4][preview4]][1]
 # Installation (one of two ways)
 1. Download one of these add-ons for your browser
    * Stylus (recommended): [Firefox][7], [Chrome][8],  or [Opera][9].
@@ -35,6 +36,8 @@
 [preview1]: https://user-images.githubusercontent.com/4815620/225387573-ae428e95-aa6d-4c96-9129-894c973a819b.png
 [preview2]: https://user-images.githubusercontent.com/4815620/225596530-e234764e-49a7-4750-bff8-c96cfd921479.png
 [preview3]: https://user-images.githubusercontent.com/4815620/225600767-1e9b1c65-29b6-4cc2-b3d4-5f6fb5789132.png
+[preview4]: https://user-images.githubusercontent.com/4815620/226672809-87643878-38f8-4691-948b-6621198306e5.png
+
 
 [7]: https://addons.mozilla.org/firefox/addon/styl-us/
 [8]: https://chrome.google.com/webstore/detail/clngdbkpkpeebahjckkjfobafhncgmne
