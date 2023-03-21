@@ -697,10 +697,11 @@ body #loginform>.row>label{
 }
 #logo>img{
 	position: relative;
-	left: 4rem;
-	width: 22rem;
-	height: 22rem;
-	filter: blur(1em);
+	top: -14rem;
+	left: -4rem;
+	width: 38rem;
+	height: 38rem;
+	filter: brightness(50%) saturate(70%) blur(2em);
 	opacity: .5;
 }
 #loginform input[type="submit"]{
