@@ -572,8 +572,8 @@
 		background-image: linear-gradient(var(--c-black-080),var(--c-black-020)) !important;
 		border: 2px solid var(--c-accent-050) !important;
 	}
-
-	html>:first-child,html body{
+	/* for the download/upload/confirmation iframes */
+	html[slick-uniqueid],html body{
 		background: transparent !important;
 	}
 	body #desktop{
