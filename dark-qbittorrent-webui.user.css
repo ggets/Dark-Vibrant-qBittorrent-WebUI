@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Dark Vibrant qBittorrent WebUI
-@version        2.1.2
+@version        2.1.4
 @namespace      https://github.com/ggets/
 @description    A darker (yet vibrant) theme for qBittorrent WebUI (improved iFelix18 theme, ispired by Cozzy's theme: userstyles.org/styles/152766)
 @author         Felix & GGets
@@ -15,7 +15,8 @@
 
 				1.0.0 (03/06/2018) - first release
 				2.0.0 (12/03/2023) - 1st mod release
-				2.1.2 (16/03/2023) - 2nd mod release (latest)
+				2.1.2 (16/03/2023) - 2nd mod release
+				2.1.4 (21/03/2023) - 3rd mod release (latest)
 
 	----------------------------------------------------------------------------------------------*/
 	/*#filtersColumn,#filtersColumn_handle{display:none;}*/
@@ -384,7 +385,8 @@
 	}
 	#desktopHeader #desktopNavbar>ul>li ul,
 	body .contextMenu,
-	body .contextMenu>li>ul{
+	body .contextMenu>li>ul,
+	body #loginform{
 		border: none !important;
 		border-radius: .25rem !important;
 		background: var(--c-dark-040) linear-gradient(var(--c-black-010),var(--c-black-060)) !important;
@@ -545,6 +547,7 @@
 		background-color: hsla(0,0%,100%,.02) !important;
 	}
 	body input[type="text"],
+	body input[type="password"],
 	body input[type="file"],
 	body select,
 	body textarea{
@@ -570,7 +573,7 @@
 		border: 2px solid var(--c-accent-050) !important;
 	}
 
-	html:first-child,html body{
+	html>:first-child,html body{
 		background: transparent !important;
 	}
 	body #desktop{
@@ -627,7 +630,8 @@
 		min-width: calc(100% - 8px) !important;
 		width: calc(100% - 8px) !important;
 	}
-	body input[type="button"]{
+	body input[type="button"],
+	body input[type="submit"]{
 		background: linear-gradient(var(--c-white-008),var(--c-black-020)) !important;
 		padding: .75rem 1rem !important;
 		box-shadow: inset -1px -1px 0 0 hsla(0,0%,0%,.3),inset 1px 1px 0 0 hsla(0,0%,100%,.1);
@@ -657,6 +661,73 @@
 		height: 6rem;
 	}
 
+
+	#main>h1{ /* do we only have this on login page? */
+		position: absolute;
+		top: 8rem;
+		z-index: 2;
+		left: 35%;
+		width: 30%;
+		display: block;
+		margin: auto;
+		opacity: .75;
+	}
+	body #loginform{
+		padding: 8rem 6rem 4rem 24rem;
+	}
+	body #loginform::after{
+		content:'';
+		display:block;
+		background: url(../images/qbittorrent-tray.svg);
+		background-size: 12rem 12rem;
+		position: absolute;
+		left: 6rem;
+		top: 7rem;
+		width: 12rem;
+		height: 12rem;
+		opacity: .64;
+		filter: drop-shadow(3px 3px 6px var(--c-black-100));
+	}
+	body #loginform>.row{
+		position: relative;
+		padding: .5rem 0;
+	}
+	body #loginform>.row>br{
+		display: none;
+	}
+	body #loginform>.row>label{
+		position: absolute;
+		left: 1rem;
+		top: 0rem;
+		background: linear-gradient(transparent,var(--c-black-040)) !important;
+		padding: .1rem .5rem;
+		backdrop-filter: blur(2px);
+		border-radius: .1rem;
+	}
+	#logo{
+		position: absolute;
+		left: calc(50% - 15rem);
+	}
+	#logo>img{
+		position: relative;
+		left: 4rem;
+		width: 22rem;
+		height: 22rem;
+		filter: blur(1em);
+		opacity: .5;
+	}
+	#loginform input[type="submit"]{
+		margin-top: .5rem;
+		width: 100% !important;
+		float: none;
+		box-shadow: inset -1px -1px 0 0 hsla(0,0%,0%,.3),inset 1px 1px 0 0 hsla(0,0%,100%,.1),3px 3px 6px var(--c-black-020);
+		background-color: var(--c-black-010) !important;
+	}
+	#loginform input,
+	#loginform input[type="submit"]{
+		width: 12rem;
+		padding: .5rem !important;
+	}
 
 
 	/* Dark qBittorrent WebUI by Felix
@@ -939,7 +1010,7 @@
 	/* VERSION
 	----------------------------------------------------------------------------------------------*/
 	div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-		content: '\Awith "Dark qBittorrent WebUI" v2.1.2 by Felix && GGets';
+		content: '\Awith "Dark qBittorrent WebUI" v2.1.4 by Felix && GGets';
 		white-space: pre;
 		font-weight: normal;
 		color: darkgreen;
